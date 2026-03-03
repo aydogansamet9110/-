@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sil</title>
+  <title>Nur Üzgün Müsün?</title>
   <style>
     body {
       margin: 0;
       height: 100vh;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      background: linear-gradient(135deg, #a1c4fd, #fad0c4);
       color: white;
       font-family: Arial, sans-serif;
       text-align: center;
@@ -59,10 +59,10 @@
 <body>
 
   <div>
-    <h1>sil</h1>
-    <p>Sevgili <span id="isim">dünyanın en iyi arkadaşı</span>,</p>
-    <button id="yesBtn" onclick="yesClicked()">sil</button>
-    <button id="noBtn" onclick="noClicked()">sil</button>
+    <h1>Nur üzgün müsün?</h1>
+    <p>Sevgili dünyanın en iyi arkadaşı,</p>
+    <button id="yesBtn" onclick="yesClicked()">Evet</button>
+    <button id="noBtn" onclick="noClicked()">Hayır</button>
     <p id="final"></p>
   </div>
 
@@ -76,26 +76,20 @@
       document.getElementById('yesBtn').style.fontSize = yesSize + 'rem';
       document.getElementById('yesBtn').style.padding = (15 + yesSize*10) + 'px ' + (40 + yesSize*20) + 'px';
 
-      const noMessages = [
-        "sil",
-        "sil",
-        "sil",
-        "sil"
-      ];
-
-      let index = Math.min(noMessages.length - 1, Math.floor((yesSize - 1.8) / 0.5));
-      document.getElementById('final').innerText = noMessages[index];
+      document.getElementById('final').innerText = "Hadi ama gerçeği söyle, biliyorum";
 
       createConfetti(30);
     }
 
     function yesClicked() {
       document.getElementById('final').innerHTML = `
-        O zaman...<br><br>
-        sen çok güçlü birisin bunu biliyorsun ben sana güveniyorum toparlayacaksın
+        Sen benim için değerlisin<br>
+        Sorun ne bilmiyorum ama ben senin her zaman yanındayım<br>
+        İyi ki varsın, iyi ki arkadaşımsın<br>
+        Dünyanın en güçlü arkadaşı ❤️
       `;
 
-      document.getElementById('yesBtn').innerText = "sen çok güçlü birisin bunu biliyorsun ben sana güveniyorum toparlayacaksın";
+      document.getElementById('yesBtn').innerText = "Konuştuk!";
       document.getElementById('noBtn').style.display = 'none';
       createConfetti(120);
     }
